@@ -1,5 +1,5 @@
-// #include <unistd.h>
-// #include <stdio.h>
+#include <stdio.h>
+#include <unistd.h>
 
 // void welcome(){
 //     printf("Welcome ASCII\n");
@@ -17,17 +17,16 @@
 //     return 0;
 // }
 
-#include <unistd.h>
 
 void ft_print_alphabet(void)
 {
-    char count; // Declare a variable 'count' of type char
+    char count;
 
-    count = 97; // Assign the ASCII value of lowercase 'a' to 'count'
-    while (count >= 97 && count <= 122) // Loop while 'count' is within the range of lowercase letters 'a' to 'z'
+    count = 97;
+    while (count >= 97 && count <= 122)
     {
-        write(1, &count, 1); // Write the character represented by 'count' to the standard output
-        count++; // Increment 'count' to move to the next character in the alphabet
+        write(1, &count, 1);
+        count++;
     }
   
 }

@@ -1,15 +1,13 @@
-#include <unistd.h>
 #include <stdio.h>
 
-int main(){
-    char name [9];
-    printf("type your name: ");
-    fflush(stdout);
+int main() {
+    char name[10];  // 9 chars + \0
 
-    read(0, &name, 9);
-    write(1, &name, 9);
+    printf("Type your name: ");
+    fgets(name, sizeof(name), stdin);
 
     printf("Your name is: %s\n", name);
 
     return 0;
 }
+
